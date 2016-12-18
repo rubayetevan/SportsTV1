@@ -5,45 +5,51 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.errorstation.sportstv.MainActivity"
+    >
 
-    tools:context="com.errorstation.sportstv.MainActivity">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainTB"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ic_topbar"
+        >
+      <TextView
+          android:id="@+id/headingTV"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="50dp"
+          android:text="@string/heading"
+          android:textColor="#ffffff"
+          android:textSize="20sp"
+          />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#00897b"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="#ffffff"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/mainTB"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/ic_topbar">
-            <TextView
-                android:textSize="20sp"
-                android:textColor="#ffffff"
-                android:id="@+id/headingTV"
-                android:text="@string/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-
-        </android.support.v7.widget.Toolbar>
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            app:tabTextColor="#ffffff"
-            app:tabSelectedTextColor="@color/colorAccent"
-            android:background="#00897b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:tabGravity="fill"
-            app:tabMode="fixed" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </LinearLayout>
+        android:background="@drawable/ic_bottom_bg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+  </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
