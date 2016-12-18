@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SportsTV</string>
-    <string name="live">LIVE TV</string>
-    <string name="schedule">SCHEDULE</string>
-    <string name="news">NEWS</string>
+    <string name="live">সরাসরি সম্প্রচার</string>
+    <string name="schedule">সময়সূচি</string>
+    <string name="news">খেলার খবর</string>
+    <string name="heading">ক্রিকেট লাইভ</string>
 </resources>
