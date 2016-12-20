@@ -22,6 +22,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/newsLoadingTV"
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
+        android:paddingTop="80dp"
+        android:text="@string/newsLoading"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
   </FrameLayout>
 

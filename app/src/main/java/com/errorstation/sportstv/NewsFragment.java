@@ -25,7 +25,7 @@ import retrofit2.Response;
 
 public class NewsFragment extends Fragment {
   View view;
-  TextView textTV;
+  TextView newsLoadingTV;
   Typeface typeFace;
   List<Newsfeed> newsList = new ArrayList<Newsfeed>();
   RecyclerView newsRV;
@@ -37,6 +37,7 @@ public class NewsFragment extends Fragment {
     view = inflater.inflate(R.layout.fragment_news, container, false);
     newsRV = (RecyclerView) view.findViewById(R.id.newsRV);
     newsPB = (ProgressBar) view.findViewById(R.id.newsPB);
+    newsLoadingTV = (TextView) view.findViewById(R.id.newsLoadingTV);
     return view;
   }
 
@@ -45,6 +46,7 @@ public class NewsFragment extends Fragment {
 
     typeFace = Typeface.createFromAsset(getActivity().getAssets(), "Siyamrupali.ttf");
     newsPB.setVisibility(View.VISIBLE);
+    newsLoadingTV.setVisibility(View.VISIBLE);
     API.Factory.getInstance().getNews().enqueue(new Callback<NewsModel>() {
       @Override public void onResponse(Call<NewsModel> call, Response<NewsModel> response) {
         String Success = response.body().getSuccess();
@@ -54,11 +56,13 @@ public class NewsFragment extends Fragment {
         LinearLayoutManager  layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         newsRV.setLayoutManager(layoutManager);
         newsPB.setVisibility(View.GONE);
+        newsLoadingTV.setVisibility(View.GONE);
         newsRV.setAdapter(newsAdapter);
       }
 
       @Override public void onFailure(Call<NewsModel> call, Throwable t) {
-        newsPB.setVisibility(View.VISIBLE);
+        newsPB.setVisibility(View.GONE);
+        newsLoadingTV.setVisibility(View.GONE);
       }
     });
   }

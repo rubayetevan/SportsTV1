@@ -9,5 +9,9 @@
     <string name="samplesource">ডিসেম্বর ১৬, ২০১৬ / সোর্স: প্রথমআলো </string>
     <string name="sutro"> সূত্র : </string>
     <string name="somoy">সময় : </string>
-  <string name="newsTrans">m</string>
+    <string name="newsTrans">m</string>
+    <string name="channel1">চ্যানেল - ১</string>
+    <string name="channel2">চ্যানেল - ২</string>
+    <string name="noLive">এই মুহূর্তে কোন খেলা সরাসরি সম্প্রচারিত হচ্ছে না, পরবর্তী খেলার সময়সূচী জানতে দয়াকরে সময়সূচী পাতাটি দেখুন। ধন্যবাদ!</string>
+    <string name="newsLoading">দয়াকরে অপেক্ষা করুন ! খেলার খবরগুলো লোড হচ্ছে...</string>
 </resources>

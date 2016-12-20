@@ -1,14 +1,21 @@
 package com.errorstation.sportstv;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -32,9 +39,32 @@ public class SplashScreen extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent intent = new Intent(SplashScreen.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                API.Factory.getInstance().getTVChannels("1,2").enqueue(new Callback<TVChannel>() {
+                    @Override
+                    public void onResponse(Call<TVChannel> call, Response<TVChannel> response) {
+
+                        String channel1 = response.body().getChannels().get(0).getUrl();
+                        String channel2 = response.body().getChannels().get(1).getUrl();
+                        SharedPreferences sharedPref = getSharedPreferences(
+                                "channelList", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("channel1", channel1);
+                        editor.putString("channel2", channel2);
+                        Log.d("SplashScreen",channel1);
+                        Log.d("SplashScreen",sharedPref.getString("channel1",""));
+                        editor.commit();
+                        Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<TVChannel> call, Throwable t) {
+
+                    }
+                });
+
             }
 
             @Override

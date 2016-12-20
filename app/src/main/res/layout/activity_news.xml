@@ -34,7 +34,7 @@
               android:scaleType="fitXY"
               android:id="@+id/newsDIMGV"
               android:layout_width="match_parent"
-              android:layout_height="250dp"
+              android:layout_height="225dp"
               />
           <TextView
               android:textStyle="bold"
