@@ -4,4 +4,10 @@
     <string name="schedule">সময়সূচি</string>
     <string name="news">খেলার খবর</string>
     <string name="heading">ক্রিকেট লাইভ</string>
+    <string name="sampleHeading">যুবাদের চোখ এখন শিরোপায়</string>
+    <string name="sampleDes1">প্রথমত লক্ষ্য ছিল দুটি। বিশ্বকাপের প্রস্তুতি, সঙ্গে কিছু অভিজ্ঞতা অর্জন। যুব এশিয়া কাপ থেকে এর বেশি প্রাপ্তি টুর্নামেন্টের আগে বাংলাদেশ অনূর্ধ্ব-১৯ দলের চিন্তায়ই ছিল না। কিন্তু গ্রুপ চ্যাম্পিয়ন হয়ে সেমিফাইনালে উঠে যাওয়ার পর দৃশ্যপট বদলে গেছে। সাইফ হাসানদের চোখে এখন শিরোপা জয়ের স্বপ্ন।</string>
+    <string name="samplesource">ডিসেম্বর ১৬, ২০১৬ / সোর্স: প্রথমআলো </string>
+    <string name="sutro"> সূত্র : </string>
+    <string name="somoy">সময় : </string>
+  <string name="newsTrans">m</string>
 </resources>

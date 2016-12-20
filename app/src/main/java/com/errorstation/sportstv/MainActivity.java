@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     TextView headingTV;
+    Typeface typeFace;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         headingTV = (TextView) findViewById(R.id.headingTV);
-        Typeface typeFace = Typeface.createFromAsset(getAssets(), "Siyamrupali.ttf");
+        typeFace = Typeface.createFromAsset(getAssets(), "Siyamrupali.ttf");
         headingTV.setTypeface(typeFace);
     }
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < tabChildsCount; i++) {
                 View tabViewChild = vgTab.getChildAt(i);
                 if (tabViewChild instanceof TextView) {
-                    ((TextView) tabViewChild).setTypeface(Typeface.createFromAsset(getAssets(), "Siyamrupali.ttf"));
+                    ((TextView) tabViewChild).setTypeface(typeFace);
                 }
             }
         }
