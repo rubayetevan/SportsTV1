@@ -4,18 +4,19 @@
     android:id="@+id/activity_news"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_bottom_bg_2"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/ic_bottom_bg_2"
-    tools:context="com.errorstation.sportstv.NewsActivity">
+    tools:context="com.errorstation.sportstv.NewsActivity"
+    >
 
   <FrameLayout
-      android:transitionName="@string/newsTrans"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
+      android:transitionName="@string/newsTrans"
       >
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -26,50 +27,66 @@
           android:layout_height="match_parent"
           >
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             >
-          <ImageView
-              android:scaleType="fitXY"
-              android:id="@+id/newsDIMGV"
+          <FrameLayout
               android:layout_width="match_parent"
-              android:layout_height="225dp"
-              />
+              android:layout_height="wrap_content"
+              >
+            <ImageView
+                android:id="@+id/newsDIMGV"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:scaleType="fitXY"
+                />
+            <View
+                android:background="@drawable/shade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:id="@+id/backIMGV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                />
+          </FrameLayout>
           <TextView
-              android:textStyle="bold"
-              android:textColor="#12887a"
               android:id="@+id/newsDheadingTV"
-              android:layout_marginTop="10dp"
-              android:layout_marginRight="15dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
               android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="10dp"
               android:text="@string/sampleHeading"
+              android:textColor="#12887a"
               android:textSize="18sp"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:textStyle="bold"
               />
           <TextView
-              android:textColor="#546e7a"
               android:id="@+id/newsDsourceTV"
-              android:textSize="12sp"
-
-              android:text="@string/samplesource"
-              android:layout_marginRight="15dp"
-              android:layout_marginLeft="15dp"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:text="@string/samplesource"
+              android:textColor="#546e7a"
+              android:textSize="12sp"
               />
           <TextView
-              android:textColor="#212121"
               android:id="@+id/newsDDesTV"
-              android:textSize="15sp"
-              android:layout_marginTop="10dp"
-              android:layout_marginBottom="10dp"
-              android:text="@string/sampleDes1"
-              android:layout_marginRight="15dp"
-              android:layout_marginLeft="15dp"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:layout_marginBottom="10dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="10dp"
+              android:text="@string/sampleDes1"
+              android:textColor="#212121"
+              android:textSize="15sp"
               />
         </LinearLayout>
       </ScrollView>

@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 public class NewsActivity extends AppCompatActivity {
   TextView newsDheadingTV, newsDsourceTV, newsDDesTV;
-  ImageView newsDIMGV;
+  ImageView newsDIMGV,backIMGV;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -19,6 +20,12 @@ public class NewsActivity extends AppCompatActivity {
     newsDsourceTV = (TextView) findViewById(R.id.newsDsourceTV);
     newsDDesTV = (TextView) findViewById(R.id.newsDDesTV);
     newsDIMGV = (ImageView) findViewById(R.id.newsDIMGV);
+    backIMGV = (ImageView) findViewById(R.id.backIMGV);
+    backIMGV.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View view) {
+        onBackPressed();
+      }
+    });
     Typeface typeFace = Typeface.createFromAsset(getAssets(), "Siyamrupali.ttf");
     newsDheadingTV.setTypeface(typeFace);
     newsDsourceTV.setTypeface(typeFace);
