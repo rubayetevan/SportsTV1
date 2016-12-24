@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     >
   <ScrollView
@@ -10,256 +10,283 @@
       android:layout_height="match_parent"
       >
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         >
       <android.support.v7.widget.CardView
-          android:layout_margin="15dp"
           android:layout_width="match_parent"
           android:layout_height="80dp"
+          android:layout_margin="15dp"
           >
         <FrameLayout
-            android:id="@+id/msgLL"
-            android:background="@drawable/ic_home_message_red"
-            android:orientation="vertical"
+            android:id="@+id/msgFL"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/ic_home_message_red"
+            android:orientation="vertical"
             >
           <LinearLayout
-              android:layout_gravity="center"
-              android:gravity="center"
-              android:background="?attr/selectableItemBackground"
-              android:clickable="true"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:background="?attr/selectableItemBackground"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
               >
             <TextView
                 android:id="@+id/msgTV"
-                android:padding="8dp"
-                android:gravity="center"
-                android:textSize="14sp"
-                android:layout_gravity="center"
-                android:textColor="#ffffff"
-                android:text="@string/noLive"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/noLive"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                />
           </LinearLayout>
         </FrameLayout>
       </android.support.v7.widget.CardView>
       <android.support.v7.widget.CardView
-          android:background="?attr/selectableItemBackground"
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
           android:layout_marginLeft="15dp"
           android:layout_marginRight="15dp"
-          android:layout_width="match_parent"
-          android:layout_height="110dp"
+          android:background="?attr/selectableItemBackground"
           >
         <FrameLayout
-            android:background="@drawable/ic_home_live_score"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/ic_home_live_score"
+            android:orientation="vertical"
             >
           <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
               android:background="?attr/selectableItemBackground"
               android:clickable="true"
               android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
               >
             <ImageView
-                android:padding="8dp"
-                android:src="@drawable/bd"
-                android:layout_weight="1"
-                android:layout_gravity="center"
+                android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/imageView"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="8dp"
+
                 />
             <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="vertical"
                 >
               <TextView
-                  android:textColor="#212121"
+                  android:id="@+id/team1TV"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
                   android:gravity="center"
                   android:text="@string/teamName"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
+                  android:textColor="#212121"
                   />
               <TextView
-                  android:layout_marginTop="5dp"
+                  android:id="@+id/score1TV"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="2dp"
                   android:gravity="center"
                   android:text="@string/teamScore"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
                   />
               <TextView
-                  android:layout_marginTop="5dp"
-                  android:gravity="center"
-                  android:text="@string/teamOver"
+                  android:id="@+id/over1TV"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="2dp"
+                  android:gravity="center"
+                  android:text="@string/teamOver"
                   />
 
             </LinearLayout>
             <TextView
-
-                android:background="@drawable/circle_background"
-                android:textColor="#ffffff"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:text="@string/vrs"
-                android:layout_weight=".6"
+                android:textSize="13sp"
+                android:padding="3dp"
+                android:id="@+id/vsTV"
                 android:layout_width="0dp"
                 android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_weight=".7"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:text="@string/vrs"
+                android:textColor="#ffffff"
                 />
             <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="vertical"
                 >
               <TextView
-                  android:textColor="#212121"
+                  android:id="@+id/team2TV"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
                   android:gravity="center"
                   android:text="@string/teamName"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
+                  android:textColor="#212121"
                   />
               <TextView
-                  android:layout_marginTop="5dp"
+                  android:id="@+id/score2TV"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="2dp"
                   android:gravity="center"
                   android:text="@string/teamScore"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
                   />
               <TextView
-                  android:layout_marginTop="5dp"
-                  android:gravity="center"
-                  android:text="@string/teamOver"
+                  android:id="@+id/over2TV"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="2dp"
+                  android:gravity="center"
+                  android:text="@string/teamOver"
                   />
             </LinearLayout>
             <ImageView
-                android:padding="8dp"
-                android:src="@drawable/nz"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="8dp"
+
                 />
           </LinearLayout>
         </FrameLayout>
       </android.support.v7.widget.CardView>
       <LinearLayout
-          android:orientation="horizontal"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:orientation="horizontal"
           >
         <android.support.v7.widget.CardView
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="120dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
             >
           <FrameLayout
 
-              android:background="@drawable/ic_home_channel_bg"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@drawable/ic_home_channel_bg"
+              android:orientation="vertical"
               >
             <LinearLayout
                 android:id="@+id/channel1LL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 >
               <TextView
+
+                  android:id="@+id/live1TV"
+                  android:layout_width="wrap_content"
+                  android:layout_height="20dp"
+                  android:layout_gravity="right"
+                  android:layout_margin="5dp"
+                  android:background="#ec070b"
+                  android:gravity="center"
+                  android:padding="3dp"
+                  android:text="@string/live"
                   android:textColor="#ffffff"
                   android:textSize="12sp"
-                  android:layout_margin="5dp"
-                  android:padding="3dp"
-                  android:layout_gravity="right"
-                  android:gravity="center"
-                  android:text="@string/live"
-                  android:background="#ec070b"
-                  android:layout_width="wrap_content"
-                  android:layout_height="20dp" />
+                  />
               <ImageView
-                  android:background="@drawable/ic_tv_channel_icon"
-                  android:layout_gravity="center"
+                  android:padding="5dp"
+                  android:id="@+id/chLogo1IMGV"
+                  android:scaleType="fitXY"
                   android:layout_width="60dp"
-                  android:layout_height="60dp" />
-              <TextView
-                  android:textSize="16sp"
+                  android:layout_height="60dp"
                   android:layout_gravity="center"
-                  android:textColor="#ffffff"
-                  android:text="@string/channel1"
+
+                  />
+              <TextView
+                  android:id="@+id/channel1TV"
                   android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" />
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="@string/channel1"
+                  android:textColor="#ffffff"
+                  android:textSize="16sp"
+                  />
 
             </LinearLayout>
 
           </FrameLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="120dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
             >
           <FrameLayout
-              android:background="@drawable/ic_home_channel_bg"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@drawable/ic_home_channel_bg"
+              android:orientation="vertical"
               >
             <LinearLayout
                 android:id="@+id/channel2LL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 >
               <TextView
+                  android:id="@+id/live2TV"
+                  android:layout_width="wrap_content"
+                  android:layout_height="20dp"
+                  android:layout_gravity="right"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginRight="5dp"
+                  android:background="#ec070b"
+                  android:gravity="center"
+                  android:padding="3dp"
+                  android:text="@string/live"
                   android:textColor="#ffffff"
                   android:textSize="12sp"
-                  android:layout_margin="5dp"
-                  android:padding="3dp"
-                  android:layout_gravity="right"
-                  android:gravity="center"
-                  android:text="@string/live"
-                  android:background="#ec070b"
-                  android:layout_width="wrap_content"
-                  android:layout_height="20dp" />
+                  />
               <ImageView
-                  android:background="@drawable/ic_tv_channel_icon"
-                  android:layout_gravity="center"
+                  android:padding="5dp"
+                  android:id="@+id/chLogo2IMGV"
+                  android:scaleType="fitXY"
                   android:layout_width="60dp"
-                  android:layout_height="60dp" />
-              <TextView
-                  android:textSize="16sp"
+                  android:layout_height="60dp"
                   android:layout_gravity="center"
-                  android:textColor="#ffffff"
-                  android:text="@string/channel2"
+
+                  />
+              <TextView
+                  android:id="@+id/channel2TV"
                   android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" />
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="@string/channel2"
+                  android:textColor="#ffffff"
+                  android:textSize="16sp"
+                  />
 
             </LinearLayout>
 
@@ -269,33 +296,33 @@
 
       </LinearLayout>
       <LinearLayout
-          android:visibility="gone"
-          android:layout_marginBottom="10dp"
-          android:orientation="horizontal"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:orientation="horizontal"
+          android:visibility="gone"
           >
         <android.support.v7.widget.CardView
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="120dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
             >
           <FrameLayout
-              android:background="@drawable/ic_home_channel_bg"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@drawable/ic_home_channel_bg"
+              android:orientation="vertical"
               >
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 >
 
             </LinearLayout>
@@ -303,26 +330,26 @@
           </FrameLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="120dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
             >
           <FrameLayout
-              android:background="@drawable/ic_home_channel_bg"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@drawable/ic_home_channel_bg"
+              android:orientation="vertical"
               >
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 >
 
             </LinearLayout>
@@ -333,7 +360,6 @@
       </LinearLayout>
 
     </LinearLayout>
-
 
 
   </ScrollView>

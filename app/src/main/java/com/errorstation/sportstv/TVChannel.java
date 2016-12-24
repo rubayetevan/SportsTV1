@@ -10,6 +10,12 @@ public class TVChannel {
     @SerializedName("success")
     @Expose
     private String success;
+    @SerializedName("starttime")
+    @Expose
+    private String starttime;
+    @SerializedName("livestatus")
+    @Expose
+    private String livestatus;
     @SerializedName("channels")
     @Expose
     private List<Channel> channels = null;
@@ -20,6 +26,22 @@ public class TVChannel {
 
     public void setSuccess(String success) {
         this.success = success;
+    }
+
+    public String getStarttime() {
+        return starttime;
+    }
+
+    public void setStarttime(String starttime) {
+        this.starttime = starttime;
+    }
+
+    public String getLivestatus() {
+        return livestatus;
+    }
+
+    public void setLivestatus(String livestatus) {
+        this.livestatus = livestatus;
     }
 
     public List<Channel> getChannels() {

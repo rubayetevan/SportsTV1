@@ -12,12 +12,9 @@ public class Channel {
     @SerializedName("channelname")
     @Expose
     private String channelname;
-    @SerializedName("starttime")
+    @SerializedName("logo")
     @Expose
-    private String starttime;
-    @SerializedName("live")
-    @Expose
-    private String live;
+    private String logo;
 
     public String getUrl() {
         return url;
@@ -35,20 +32,12 @@ public class Channel {
         this.channelname = channelname;
     }
 
-    public String getStarttime() {
-        return starttime;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setStarttime(String starttime) {
-        this.starttime = starttime;
-    }
-
-    public String getLive() {
-        return live;
-    }
-
-    public void setLive(String live) {
-        this.live = live;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
 }

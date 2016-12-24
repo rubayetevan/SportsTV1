@@ -19,8 +19,11 @@ public interface API {
   @GET("getnewsdetails.php")
   Call<NewsModel> getNews();
 
-  @GET("getchannels.php?")
-  Call<TVChannel> getTVChannels(@Query ("id") String ID);
+  @GET("getchannels.php")
+  Call<TVChannel> getTVChannels();
+
+  @GET("getschedule.php")
+  Call<CricketSchedules> getSchedules();
 
   class Factory {
     public static API api;
