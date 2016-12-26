@@ -25,6 +25,9 @@ public interface API {
   @GET("getschedule.php")
   Call<CricketSchedules> getSchedules();
 
+  @GET("getscores.php")
+  Call<LiveScores> getScores();
+
   class Factory {
     public static API api;
 
