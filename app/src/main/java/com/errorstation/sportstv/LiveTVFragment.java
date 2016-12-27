@@ -200,11 +200,11 @@ public class LiveTVFragment extends Fragment {
             showLogo(team1IMGV,team1logo);
             team1TV.setText(team1);
             score1TV.setText(team1runs+"/"+team1wickets);
-            over1TV.setText("ওভার: "+team1overs+"/৫০");
+            over1TV.setText("ওভ: "+team1overs+"/৫০");
             showLogo(team2IMGV,team2logo);
             team2TV.setText(team2);
             score2TV.setText(team2runs+"/"+team2wickets);
-            over2TV.setText("ওভার: "+team2overs+"/৫০");
+            over2TV.setText("ওভ: "+team2overs+"/৫০");
           }
 
           @Override public void onFailure(Call<LiveScores> call, Throwable t) {
