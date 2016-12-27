@@ -8,10 +8,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.NativeExpressAdView;
 
 public class NewsActivity extends AppCompatActivity {
   TextView newsDheadingTV, newsDsourceTV, newsDDesTV;
   ImageView newsDIMGV,backIMGV;
+  NativeExpressAdView mAdView,mAdView1;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -21,6 +25,16 @@ public class NewsActivity extends AppCompatActivity {
     newsDDesTV = (TextView) findViewById(R.id.newsDDesTV);
     newsDIMGV = (ImageView) findViewById(R.id.newsDIMGV);
     backIMGV = (ImageView) findViewById(R.id.backIMGV);
+
+
+    mAdView = (NativeExpressAdView)findViewById(R.id.adViewF1);
+    mAdView1= (NativeExpressAdView)findViewById(R.id.adViewF2);
+    AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+        .addTestDevice("EB7E6FA39C4BDD75B5A17F5285A52364")
+        .build();
+    mAdView.loadAd(adRequest);
+    mAdView1.loadAd(adRequest);
+
     backIMGV.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
         onBackPressed();

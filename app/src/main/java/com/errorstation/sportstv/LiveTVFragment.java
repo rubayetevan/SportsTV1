@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.NativeExpressAdView;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -35,13 +40,14 @@ public class LiveTVFragment extends Fragment {
   LinearLayout channel1LL, channel2LL;
   String liveStatus, c1Logo, c2Logo, c1Name, c2Name;
   FrameLayout msgFL;
-  int a = 0;
   TextView msgTV, team1TV, score1TV, over1TV, team2TV, score2TV, over2TV, live1TV, live2TV,
       channel1TV, channel2TV, vsTV;
   Typeface typeFace;
   ImageView chLogo2IMGV, chLogo1IMGV, team1IMGV, team2IMGV;
   private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
   ScheduledFuture<?> beeperHandle;
+  CardView scoreCRDV;
+  NativeExpressAdView mAdView;
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -51,6 +57,8 @@ public class LiveTVFragment extends Fragment {
     channel2LL = (LinearLayout) view.findViewById(R.id.channel2LL);
     msgFL = (FrameLayout) view.findViewById(R.id.msgFL);
     msgTV = (TextView) view.findViewById(R.id.msgTV);
+
+    scoreCRDV = (CardView) view.findViewById(R.id.scoreCRDV);
 
     team1TV = (TextView) view.findViewById(R.id.team1TV);
     score1TV = (TextView) view.findViewById(R.id.score1TV);
@@ -65,7 +73,7 @@ public class LiveTVFragment extends Fragment {
     vsTV = (TextView) view.findViewById(R.id.vsTV);
     chLogo2IMGV = (ImageView) view.findViewById(R.id.chLogo2IMGV);
     chLogo1IMGV = (ImageView) view.findViewById(R.id.chLogo1IMGV);
-
+    mAdView = (NativeExpressAdView) view.findViewById(R.id.adViewF3);
     team1IMGV = (ImageView) view.findViewById(R.id.team1IMGV);
     team2IMGV = (ImageView) view.findViewById(R.id.team2IMGV);
     return view;
@@ -96,23 +104,34 @@ public class LiveTVFragment extends Fragment {
     c1Name = sharedPref.getString("c1Name", "");
     c2Name = sharedPref.getString("c2Name", "");
 
+
+    MobileAds.initialize(getActivity(), "ca-app-pub-4958954259926855~7413974922");
+
+    AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+        .addTestDevice("EB7E6FA39C4BDD75B5A17F5285A52364")
+        .build();
+    mAdView.loadAd(adRequest);
+
     showLogo(chLogo1IMGV, c1Logo);
     showLogo(chLogo2IMGV, c2Logo);
 
     channel1TV.setText(c1Name);
     channel2TV.setText(c2Name);
 
-    stopShowingScores();
-    showScores();
 
     if (liveStatus.equals("0")) {
+      scoreCRDV.setVisibility(View.GONE);
+      stopShowingScores();
       msgFL.setBackground(getActivity().getResources().getDrawable(R.drawable.ic_home_message_red));
       msgTV.setText(getActivity().getResources().getString(R.string.noLive));
       live1TV.setVisibility(View.INVISIBLE);
       live2TV.setVisibility(View.INVISIBLE);
+
     } else if (liveStatus.equals("1")) {
-      msgFL.setBackground(
-          getActivity().getResources().getDrawable(R.drawable.ic_home_message_green));
+      scoreCRDV.setVisibility(View.VISIBLE);
+      stopShowingScores();
+      showScores();
+      msgFL.setBackground(getActivity().getResources().getDrawable(R.drawable.ic_home_message_green));
       msgTV.setText(getActivity().getResources().getString(R.string.liveOn));
       live1TV.setVisibility(View.VISIBLE);
       live2TV.setVisibility(View.VISIBLE);
@@ -178,10 +197,11 @@ public class LiveTVFragment extends Fragment {
             String team2wickets = response.body().getScores().get(0).getTeam2wickets();
             String team2overs = response.body().getScores().get(0).getTeam2overs();
 
+            showLogo(team1IMGV,team1logo);
             team1TV.setText(team1);
             score1TV.setText(team1runs+"/"+team1wickets);
             over1TV.setText("ওভার: "+team1overs+"/৫০");
-
+            showLogo(team2IMGV,team2logo);
             team2TV.setText(team2);
             score2TV.setText(team2runs+"/"+team2wickets);
             over2TV.setText("ওভার: "+team2overs+"/৫০");

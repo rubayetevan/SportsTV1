@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_news"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -36,6 +37,7 @@
               android:layout_height="wrap_content"
               >
             <ImageView
+                android:focusableInTouchMode="true"
                 android:id="@+id/newsDIMGV"
                 android:layout_width="match_parent"
                 android:layout_height="225dp"
@@ -76,6 +78,14 @@
               android:textColor="#546e7a"
               android:textSize="12sp"
               />
+          <com.google.android.gms.ads.NativeExpressAdView
+              android:layout_marginTop="10dp"
+              android:id="@+id/adViewF1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              ads:adSize="320x82"
+              ads:adUnitId="ca-app-pub-4958954259926855/2844174522"></com.google.android.gms.ads.NativeExpressAdView>
           <TextView
               android:id="@+id/newsDDesTV"
               android:layout_width="match_parent"
@@ -88,6 +98,15 @@
               android:textColor="#212121"
               android:textSize="15sp"
               />
+          <com.google.android.gms.ads.NativeExpressAdView
+              android:layout_marginTop="10dp"
+              android:id="@+id/adViewF2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              ads:adSize="320x255"
+              android:layout_marginBottom="15dp"
+              ads:adUnitId="ca-app-pub-4958954259926855/4320907722"></com.google.android.gms.ads.NativeExpressAdView>
         </LinearLayout>
       </ScrollView>
 
