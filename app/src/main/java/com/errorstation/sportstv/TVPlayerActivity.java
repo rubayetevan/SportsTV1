@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -22,12 +23,20 @@ public class TVPlayerActivity extends AppCompatActivity {
   GiraffePlayer player;
   LinearLayout tvLayout;
   NativeExpressAdView mAdView;
+  TextView liveTV,teamsTV,matchTV,placeTV;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_tvplayer);
     //tvLayout = (LinearLayout) findViewById(R.id.tvLayout);
     mAdView = (NativeExpressAdView) findViewById(R.id.adViewF4);
+
+    liveTV = (TextView) findViewById(R.id.liveTV);
+    teamsTV = (TextView) findViewById(R.id.teamsTV);
+    matchTV = (TextView) findViewById(R.id.matchTV);
+    placeTV = (TextView) findViewById(R.id.placeTV);
+
+
     Intent intent = getIntent();
     int channelCode = intent.getIntExtra("channel", 0);
     SharedPreferences sharedPref = getSharedPreferences("channelList", Context.MODE_PRIVATE);

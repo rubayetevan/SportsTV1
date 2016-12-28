@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -76,6 +77,7 @@ public class ScheduleFragment extends Fragment {
       @Override public void onFailure(Call<CricketSchedules> call, Throwable t) {
         schPB.setVisibility(View.GONE);
         schLoadingTV.setVisibility(View.GONE);
+        Toast.makeText(getActivity(), "সার্ভার রক্ষনাবেক্ষনের কাজ চলছে!  সাময়িক অসুবিধার জন্য আমরা আন্তরিক ভাবে দুঃখিত।", Toast.LENGTH_LONG).show();
       }
     });
   }
