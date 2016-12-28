@@ -47,9 +47,8 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
 
 
 
-
     holder.teamsTV.setText(schedulesList.get(position).getTeam1()+" বনাম "+schedulesList.get(position).getTeam2());
-    holder.matchTV.setText(schedulesList.get(position).getMatchno()+"ম খেলা, "+schedulesList.get(position).getMatchtype()+", " +schedulesList.get(position).getStartdate());
+    holder.matchTV.setText(schedulesList.get(position).getMatchno()+" খেলা, "+schedulesList.get(position).getMatchtype()+", " +schedulesList.get(position).getStartdate());
     holder.placeTV.setText(schedulesList.get(position).getVenue());
     holder.timeTV.setText(schedulesList.get(position).getStarttime());
     Glide

@@ -19,6 +19,9 @@ public class TVChannel {
     @SerializedName("channels")
     @Expose
     private List<Channel> channels = null;
+    @SerializedName("matchdata")
+    @Expose
+    private List<Matchdatum> matchdata = null;
 
     public String getSuccess() {
         return success;
@@ -50,6 +53,14 @@ public class TVChannel {
 
     public void setChannels(List<Channel> channels) {
         this.channels = channels;
+    }
+
+    public List<Matchdatum> getMatchdata() {
+        return matchdata;
+    }
+
+    public void setMatchdata(List<Matchdatum> matchdata) {
+        this.matchdata = matchdata;
     }
 
 }

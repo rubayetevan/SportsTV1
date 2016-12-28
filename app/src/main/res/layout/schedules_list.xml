@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:paddingTop="7.5dp"
-    android:paddingBottom="7.5dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="7.5dp"
+    android:paddingTop="7.5dp"
+    >
   <android.support.v7.widget.CardView
       android:layout_width="match_parent"
       android:layout_height="120dp"
@@ -40,36 +41,39 @@
             android:orientation="vertical"
             >
           <TextView
-              android:textSize="16sp"
-              android:textColor="#212121"
               android:id="@+id/teamsTV"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textColor="#212121"
+              android:textSize="16sp"
               />
           <TextView
-              android:textColor="#f20c0c"
-              android:textSize="12sp"
               android:id="@+id/matchTV"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textColor="#f20c0c"
+              android:textSize="12sp"
               />
           <TextView
-              android:textSize="12sp"
-              android:textColor="#02a154"
               android:id="@+id/placeTV"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:textColor="#02a154"
+              android:textSize="12sp"
               />
           <TextView
-              android:layout_marginTop="5dp"
-              android:textSize="12sp"
-              android:textColor="#ffffff"
-              android:paddingLeft="3dp"
-              android:paddingRight="3dp"
-              android:background="#455A64"
+              android:paddingLeft="14dp"
               android:id="@+id/timeTV"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
+              android:layout_width="80dp"
+              android:layout_height="20dp"
+              android:layout_gravity="center"
+              android:layout_marginTop="5dp"
+              android:background="@drawable/ic_clock"
+              android:gravity="center"
+
+              android:paddingRight="3dp"
+              android:textColor="#ffffff"
+              android:textSize="12sp"
               />
 
         </LinearLayout>

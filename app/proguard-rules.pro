@@ -15,9 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--keep public class * implements com.bumptech.glide.module.GlideModule
--keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
-  **[] $VALUES;
-  public *;
-}
--keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+-dontwarn okio.**
+-dontwarn retrofit2.Platform$Java8
+-dontwarn sun.misc.Unsafe
+-dontwarn org.w3c.dom.bootstrap.DOMImplementationRegistry

@@ -60,6 +60,17 @@ public class SplashScreen extends AppCompatActivity {
               String c1Name = response.body().getChannels().get(0).getChannelname();
               String c2Name = response.body().getChannels().get(1).getChannelname();
 
+              String team1="",team2="",matchNo="",place="",matchType="";
+
+              if(liveStatus.equals("1"))
+              {
+                team1 = response.body().getMatchdata().get(0).getTeam1();
+                team2 = response.body().getMatchdata().get(0).getTeam2();
+                matchNo = response.body().getMatchdata().get(0).getMatchno();
+                place = response.body().getMatchdata().get(0).getVenue();
+                matchType = response.body().getMatchdata().get(0).getMatchtype();
+              }
+
               SharedPreferences sharedPref =
                   getSharedPreferences("channelList", Context.MODE_PRIVATE);
               SharedPreferences.Editor editor = sharedPref.edit();
@@ -71,6 +82,15 @@ public class SplashScreen extends AppCompatActivity {
               editor.putString("c2Logo", c2Logo);
               editor.putString("c1Name", c1Name);
               editor.putString("c2Name", c2Name);
+
+              editor.putString("team1", team1);
+              editor.putString("team2", team2);
+              editor.putString("matchNo", matchNo);
+              editor.putString("place", place);
+              editor.putString("matchType", matchType);
+
+
+
               editor.commit();
 
               Intent intent = new Intent(SplashScreen.this, MainActivity.class);
