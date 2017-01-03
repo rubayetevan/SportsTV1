@@ -1,18 +1,18 @@
 
-package com.errorstation.sportstv;
+package com.errorstation.tigerslive;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class CricketSchedules {
+public class NewsModel {
 
     @SerializedName("success")
     @Expose
     private String success;
-    @SerializedName("matchinfo")
+    @SerializedName("newsfeed")
     @Expose
-    private List<Matchinfo> matchinfo = null;
+    private List<Newsfeed> newsfeed = null;
 
     public String getSuccess() {
         return success;
@@ -22,12 +22,12 @@ public class CricketSchedules {
         this.success = success;
     }
 
-    public List<Matchinfo> getMatchinfo() {
-        return matchinfo;
+    public List<Newsfeed> getNewsfeed() {
+        return newsfeed;
     }
 
-    public void setMatchinfo(List<Matchinfo> matchinfo) {
-        this.matchinfo = matchinfo;
+    public void setNewsfeed(List<Newsfeed> newsfeed) {
+        this.newsfeed = newsfeed;
     }
 
 }

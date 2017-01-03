@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.errorstation.sportstv">
+    package="com.errorstation.tigerslive">
 
   <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -10,29 +10,29 @@
       android:label="@string/app_name"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".SplashScreen">
+    <activity android:name="com.errorstation.tigerslive.SplashScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".MainActivity"/>
-    <activity android:name=".NewsActivity"/>
+    <activity android:name="com.errorstation.tigerslive.MainActivity"/>
+    <activity android:name="com.errorstation.tigerslive.NewsActivity"/>
 
-    <service android:name=".FirebaseMessagingService">
+    <service android:name="com.errorstation.tigerslive.FirebaseMessagingService">
       <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT"/>
       </intent-filter>
     </service>
-    <service android:name=".FirebaseInstanceIDService">
+    <service android:name="com.errorstation.tigerslive.FirebaseInstanceIDService">
       <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
       </intent-filter>
     </service>
 
     <activity
-        android:name=".TVPlayerActivity"
+        android:name="com.errorstation.tigerslive.TVPlayerActivity"
         android:configChanges="orientation|screenSize">
 
     </activity>

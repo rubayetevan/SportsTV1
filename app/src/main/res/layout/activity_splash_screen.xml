@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#00897b"
-    tools:context="com.errorstation.sportstv.SplashScreen"
+    tools:context="com.errorstation.tigerslive.SplashScreen"
     >
   <FrameLayout
       android:layout_width="match_parent"

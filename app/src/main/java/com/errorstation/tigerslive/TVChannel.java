@@ -1,5 +1,5 @@
 
-package com.errorstation.sportstv;
+package com.errorstation.tigerslive;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

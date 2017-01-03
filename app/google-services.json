@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "284647746999",
-    "firebase_url": "https://tv-project-57e9b.firebaseio.com",
-    "project_id": "tv-project-57e9b",
-    "storage_bucket": "tv-project-57e9b.appspot.com"
+    "project_number": "279987777290",
+    "firebase_url": "https://tv-project-bedf2.firebaseio.com",
+    "project_id": "tv-project-bedf2",
+    "storage_bucket": "tv-project-bedf2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:284647746999:android:aba54a8a3a6d07f8",
+        "mobilesdk_app_id": "1:279987777290:android:2913a0b9537941f0",
         "android_client_info": {
-          "package_name": "com.errorstation.sportstv"
+          "package_name": "com.errorstation.tigerslive"
         }
       },
       "oauth_client": [
         {
-          "client_id": "284647746999-7hdcf01a0b6ds5hjmd18q66aunr4q0c0.apps.googleusercontent.com",
+          "client_id": "279987777290-jpf64o59kfuprcikupjlbcr9v108nuoi.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5oiTe-X9Kn9T8CO2LIR19eqAW-oYCY6g"
+          "current_key": "AIzaSyBOnHzTOnOz6Z95w_ZppLKkbaYFWkDZDes"
         }
       ],
       "services": {

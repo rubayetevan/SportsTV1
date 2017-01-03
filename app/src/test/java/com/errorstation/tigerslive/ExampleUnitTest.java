@@ -1,4 +1,4 @@
-package com.errorstation.sportstv;
+package com.errorstation.tigerslive;
 
 import org.junit.Test;
 

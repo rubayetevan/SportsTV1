@@ -1,4 +1,4 @@
-package com.errorstation.sportstv;
+package com.errorstation.tigerslive;
 
 /**
  * Created by Rubayet on 18-Dec-16.
@@ -6,7 +6,6 @@ package com.errorstation.sportstv;
 
 
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.iid.FirebaseInstanceId;

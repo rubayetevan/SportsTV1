@@ -1,10 +1,10 @@
 
-package com.errorstation.sportstv;
+package com.errorstation.tigerslive;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Matchdatum {
+public class Matchinfo {
 
     @SerializedName("id")
     @Expose

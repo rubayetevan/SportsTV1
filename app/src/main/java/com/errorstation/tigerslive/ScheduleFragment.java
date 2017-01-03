@@ -1,4 +1,4 @@
-package com.errorstation.sportstv;
+package com.errorstation.tigerslive;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
