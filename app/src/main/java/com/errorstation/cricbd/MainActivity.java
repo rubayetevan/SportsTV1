@@ -1,4 +1,4 @@
-package com.errorstation.tigerslive;
+package com.errorstation.cricbd;
 
 import android.graphics.Typeface;
 import android.support.design.widget.TabLayout;

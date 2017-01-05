@@ -1,5 +1,5 @@
 
-package com.errorstation.tigerslive;
+package com.errorstation.cricbd;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

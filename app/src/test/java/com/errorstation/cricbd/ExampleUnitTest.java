@@ -1,4 +1,4 @@
-package com.errorstation.tigerslive;
+package com.errorstation.cricbd;
 
 import org.junit.Test;
 

@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "279987777290",
-    "firebase_url": "https://tv-project-bedf2.firebaseio.com",
-    "project_id": "tv-project-bedf2",
-    "storage_bucket": "tv-project-bedf2.appspot.com"
+    "project_number": "655169803549",
+    "firebase_url": "https://tv-project-3e2f9.firebaseio.com",
+    "project_id": "tv-project-3e2f9",
+    "storage_bucket": "tv-project-3e2f9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:279987777290:android:2913a0b9537941f0",
+        "mobilesdk_app_id": "1:655169803549:android:cdf5b6ce845e1e28",
         "android_client_info": {
-          "package_name": "com.errorstation.tigerslive"
+          "package_name": "com.errorstation.cricbd"
         }
       },
       "oauth_client": [
         {
-          "client_id": "279987777290-jpf64o59kfuprcikupjlbcr9v108nuoi.apps.googleusercontent.com",
+          "client_id": "655169803549-t4n0re5ps85hq2ib5807sbf6jo09t976.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBOnHzTOnOz6Z95w_ZppLKkbaYFWkDZDes"
+          "current_key": "AIzaSyAbAAU1v-zIu81JlUKi5SoVg_fJwYYEu2M"
         }
       ],
       "services": {

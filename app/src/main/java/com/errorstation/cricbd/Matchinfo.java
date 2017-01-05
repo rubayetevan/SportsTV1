@@ -1,5 +1,5 @@
 
-package com.errorstation.tigerslive;
+package com.errorstation.cricbd;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

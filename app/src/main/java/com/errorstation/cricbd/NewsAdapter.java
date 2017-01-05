@@ -1,4 +1,4 @@
-package com.errorstation.tigerslive;
+package com.errorstation.cricbd;
 
 import android.app.Activity;
 import android.app.ActivityOptions;

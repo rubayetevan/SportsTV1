@@ -1,4 +1,4 @@
-package com.errorstation.tigerslive;
+package com.errorstation.cricbd;
 
 import android.content.Intent;
 import android.graphics.Typeface;
